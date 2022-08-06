@@ -32,7 +32,7 @@
             "fetch_status": true
           },
           "style": "diamond",
-          "template": " <p:marrom>\uF408</>  <p:vermelho>{{ .HEAD }}</>{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "template": " <p:marrom>\uF408</>  <p:vermelho>{{ .HEAD }}</>{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 <p:vermelho>{{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 <p:vermelho>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \uf692 <p:vermelho>{{ .StashCount }}</>{{ end }} ",
           "type": "git"
         }
       ],
