@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "vermelho": "#F24444",
+    "azul": "#04ADBF",
+    "azul-marine": "#0D6973",
+    "marrom": "#614C33",
+    "laranja": "#ED5418",
+    "verde": "#21CA1B"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:azul",
+          "properties": {
+            "folder_icon": "\uf07b",
+            "folder_separator_icon": " <p:marrom>\ue5ff</> ",
+            "home_icon": "NDDRaiz",
+            "style": "agnoster_full"
+          },
+          "style": "plain",
+          "template": "{{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "p:marrom",
+          "properties": {
+            "branch_icon": "",
+            "fetch_status": true
+          },
+          "style": "diamond",
+          "template": " <p:marrom>\uF408</>  <p:vermelho>{{ .HEAD }}</>{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "newline": false,
+      "segments": [
+        {
+          "foreground": "p:vermelho",
+          "style": "diamond",
+          "template": "{{.UserName}} <p:marrom>on</>",
+          "type": "session"
+        },
+        {
+          "foreground": "p:azul",
+          "properties": {
+            "time_format": "Monday <p:marrom>at</> 3:04 PM"
+          },
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }}",
+          "type": "time"
+        },
+        {
+            "foreground": "p:verde",
+          "style": "diamond",
+          "template": " <p:marrom>(</>{{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}gb<p:marrom>)</>",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "p:verde",
+          "properties": {
+            "style": "austin",
+            "threshold": 0
+          },
+          "style": "plain",
+          "template": "<p:marrom>(</>{{ .FormattedMs }}<p:marrom>)</>",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true ,
+      "segments": [
+        {
+          "foreground": "p:verde",
+          "style": "plain",
+          "type": "text",
+          "template": "<b>>></b> "
+        }        
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
