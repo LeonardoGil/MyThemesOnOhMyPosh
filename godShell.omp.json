@@ -90,5 +90,9 @@
       "type": "prompt"
     }
   ],
+  "transient_prompt": {
+    "foreground": "p:azul",
+    "template": "<b>>></b> "
+  },
   "version": 2
 }
