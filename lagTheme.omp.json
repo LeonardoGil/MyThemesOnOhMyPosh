@@ -15,16 +15,11 @@
          "segments": [
             {
                "type": "battery",
-               "style": "diamond",
-               "leading_diamond": "\ue0b6",
-               "trailing_diamond": "\ue0b4",
-               "background_templates": [
-                  "{{if eq \"Discharging\" .State.String}}#cc3300{{end}}",
-                  "{{if eq \"Charging\" .State.String}}#ffcc00{{end}}",
-                  "{{if eq \"Full\" .State.String}}#339900{{end}}"
-               ],
+               "style": "powerline",
+               "powerline_symbol": " ",
+               "background": "#1FD4A0",
                "foreground": "#000000",
-               "template": " {{ if not .Error }}{{ .Icon }}{{ if ne \"Full\" .State.String }}{{ .Percentage }}% {{ end }}{{ end }}",
+               "template": "{{ if not .Error }}{{ .Icon }}{{ if ne \"Full\" .State.String }}{{ .Percentage }}% {{ end }}{{ end }}",
                "properties": {
                   "discharging_icon": " ",
                   "charging_icon": " ",
@@ -44,7 +39,7 @@
                "foreground": "#000000",
                "properties": {
                   "style": "agnoster_full",
-                  "folder_separator_icon": " > ",
+                  "folder_separator_icon": " \uf105 ",
                   "cycle": [
                      "#FF3C12",
                      "#9AC724",
@@ -64,7 +59,7 @@
                "foreground": "#FFFFFF",
                "style": "plain",
                "type": "text",
-               "template": "Run: "
+               "template": ":: "
             }
          ],
          "type": "prompt"
@@ -72,7 +67,7 @@
    ],
    "transient_prompt": {
       "foreground": "#FFFFFF",
-      "template": "<b>- </b>"
+      "template": "\uf105"
    },
    "version": 2
 }
