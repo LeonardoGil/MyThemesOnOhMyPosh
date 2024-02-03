@@ -1,3 +1,6 @@
 {
-    "editor.fontFamily": "MesloLGL Nerd Font"
+    "editor.fontFamily": "MesloLGM NF",
+    "editor.fontSize": 14
 }
+
+// "template": " {{ if not .Error }}{{ .Icon }}{{ if ne \"Full\" .State.String }}{{ .Percentage }}% {{ end }}{{ end }}",
