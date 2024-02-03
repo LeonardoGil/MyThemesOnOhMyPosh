@@ -81,18 +81,18 @@
       "newline": true ,
       "segments": [
         {
-          "foreground": "p:verde",
+          "foreground": "p:azul",
           "style": "plain",
           "type": "text",
-          "template": "<b>>></b> "
+          "template": "<b></b> "
         }        
       ],
       "type": "prompt"
     }
   ],
   "transient_prompt": {
-    "foreground": "p:azul",
-    "template": "<b>>></b> "
+    "template": "<b></b> ",
+    "foreground": "p:verde"
   },
   "version": 2
 }

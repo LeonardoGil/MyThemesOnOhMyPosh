@@ -14,39 +14,29 @@
          "newline": true,
          "segments": [
             {
-               "type": "battery",
-               "style": "powerline",
-               "powerline_symbol": " ",
-               "background": "#1FD4A0",
-               "foreground": "#000000",
-               "template": "{{ if not .Error }}{{ .Icon }}{{ if ne \"Full\" .State.String }}{{ .Percentage }}% {{ end }}{{ end }}",
-               "properties": {
-                  "discharging_icon": " ",
-                  "charging_icon": " ",
-                  "charged_icon": "󱊦 "
-               }
-            }
-         ],
-         "type": "prompt"
-      },
-      {
-         "alignment": "left",
-         "newline": true,
-         "segments": [
-            {
                "type": "path",
                "style": "powerline",
-               "foreground": "#000000",
+               "foreground": "#FFFFFF",
+               "template": "[{{.Path}}]",
                "properties": {
-                  "style": "agnoster_full",
-                  "folder_separator_icon": " \uf105 ",
+                  "style": "agnoster_short",
+                  "max_depth": 3,
+                  "folder_separator_icon": "] <p:marrom></> [",
                   "cycle": [
-                     "#FF3C12",
-                     "#9AC724",
-                     "#38C724",
-                     "#24C798"
+                     "p:vermelho",
+                     "p:azul",
+                     "p:laranja",
+                     "p:verde"
                   ]
                }
+            },
+            {
+               "type": "docker",
+               "style": "powerline",
+               "powerline_symbol": "",
+               "foreground": "#000000",
+               "background": "#0B59E7",
+               "template": "  {{ .Context }} "
             }
          ],
          "type": "prompt"
@@ -59,7 +49,7 @@
                "foreground": "#FFFFFF",
                "style": "plain",
                "type": "text",
-               "template": ":: "
+               "template": "> "
             }
          ],
          "type": "prompt"
