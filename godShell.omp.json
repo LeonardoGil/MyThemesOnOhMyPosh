@@ -18,7 +18,7 @@
           "properties": {
             "folder_icon": "\uf07b",
             "folder_separator_icon": " <p:marrom>\ue5ff</> ",
-            "home_icon": "NDDRaiz",
+            "home_icon": "🏡 Home ",
             "style": "agnoster_full"
           },
           "style": "plain",
@@ -81,18 +81,16 @@
       "newline": true ,
       "segments": [
         {
-          "foreground": "p:azul",
           "style": "plain",
           "type": "text",
-          "template": "<b></b> "
+          "template": "_ "
         }        
       ],
       "type": "prompt"
     }
   ],
   "transient_prompt": {
-    "template": "<b></b> ",
-    "foreground": "p:verde"
+    "template": " 📦 "
   },
   "version": 2
 }
